@@ -1,0 +1,213 @@
+
+/* =========================================================
+   Inventaris & Aset — Custom CSS (AdminLTE 3 override)
+   Fokus: clean, rapi, mudah dibaca, responsif
+   ========================================================= */
+
+/* ---------- CSS Variables (tema) ---------- */
+:root{
+  --ia-primary:#4f46e5;       /* indigo-600 */
+  --ia-primary-600:#4338ca;
+  --ia-primary-700:#3730a3;
+  --ia-accent:#0ea5e9;        /* sky-500 */
+  --ia-success:#16a34a;       /* green-600 */
+  --ia-danger:#dc2626;        /* red-600 */
+  --ia-warning:#d97706;       /* amber-600 */
+  --ia-text:#111827;          /* gray-900 */
+  --ia-muted:#6b7280;         /* gray-500 */
+  --ia-border:#e5e7eb;        /* gray-200 */
+  --ia-bg:#f4f6f9;            /* AdminLTE base */
+  --ia-card:#ffffff;
+  --ia-radius:14px;
+  --ia-shadow:0 6px 18px rgba(17,24,39,.06);
+}
+
+/* ---------- Global ---------- */
+html,body{color:var(--ia-text);}
+a{color:var(--ia-primary);}
+a:hover{color:var(--ia-primary-700);}
+
+.content-wrapper{
+  background:var(--ia-bg);
+  padding:22px;
+}
+
+.container-fluid{padding-left:6px;padding-right:6px;}
+.card{
+  border:1px solid var(--ia-border);
+  border-radius:var(--ia-radius);
+  box-shadow:var(--ia-shadow);
+}
+.card-header{
+  background:linear-gradient(180deg,#fff, #fafafa);
+  border-bottom:1px solid var(--ia-border);
+  border-radius:var(--ia-radius) var(--ia-radius) 0 0 !important;
+  font-weight:600;
+}
+
+/* ---------- Navbar ---------- */
+.main-header.navbar{
+  border-bottom:1px solid var(--ia-border);
+  box-shadow:var(--ia-shadow);
+}
+.main-header .btn,
+.main-header .nav-link{border-radius:10px}
+
+/* ---------- Sidebar ---------- */
+.main-sidebar{
+  box-shadow:var(--ia-shadow);
+}
+.brand-link{
+  font-weight:700;
+  letter-spacing:.2px;
+}
+.nav-sidebar .nav-link{
+  border-radius:10px;
+  margin:2px 8px;
+}
+.nav-sidebar .nav-link.active{
+  background:var(--ia-primary);
+  color:#fff;
+  box-shadow:0 8px 14px rgba(79,70,229,.22);
+}
+.nav-sidebar .nav-link:hover{background:rgba(79,70,229,.12);}
+
+/* ---------- Buttons ---------- */
+.btn{
+  border-radius:10px;
+  font-weight:600;
+  transition:all .15s ease;
+}
+.btn-primary{
+  background:var(--ia-primary);
+  border-color:var(--ia-primary);
+}
+.btn-primary:hover{background:var(--ia-primary-600);border-color:var(--ia-primary-600);}
+.btn-outline-secondary{border-color:var(--ia-border);}
+
+/* tiny icon spacing */
+.btn .fas,.btn .far,.btn .fal,.btn .fa{margin-right:.35rem}
+
+/* ---------- Tables ---------- */
+.table{
+  background:#fff;
+  border:1px solid var(--ia-border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.table thead th{
+  background:#fafafa;
+  border-bottom:1px solid var(--ia-border);
+  font-weight:700;
+}
+.table tbody tr:hover{background:#fbfbff;}
+.table td,.table th{vertical-align:middle}
+
+/* action buttons in table cells */
+.table .btn{padding:.35rem .6rem;}
+
+/* ---------- Forms ---------- */
+.form-control{
+  border-radius:10px;
+  border-color:#e6e8ee;
+  box-shadow:none;
+}
+.form-control:focus{
+  border-color:var(--ia-primary);
+  box-shadow:0 0 0 .2rem rgba(79,70,229,.12);
+}
+.form-group label{font-weight:600;}
+.invalid-feedback, .text-danger{font-size:.85rem}
+
+/* Select */
+select.form-control{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right .85rem center;
+  background-size:10px 6px;
+  padding-right:2rem;
+}
+
+/* ---------- Alerts / Flash ---------- */
+.alert{
+  border:none;
+  border-radius:12px;
+  box-shadow:var(--ia-shadow);
+}
+.alert-success{background:linear-gradient(180deg,#ecfdf5,#e6fffa);color:#065f46;}
+.alert-danger{background:linear-gradient(180deg,#fef2f2,#ffe4e6);color:#7f1d1d;}
+.alert-warning{background:linear-gradient(180deg,#fffbeb,#fff7ed);color:#7c2d12;}
+
+/* ---------- Badges & Pills ---------- */
+.badge{border-radius:999px;padding:.45em .7em;font-weight:600}
+
+/* ---------- Pagination ---------- */
+.page-item .page-link{
+  border-radius:8px;
+  margin:0 3px;
+  border:1px solid var(--ia-border);
+}
+.page-item.active .page-link{
+  background:var(--ia-primary);
+  border-color:var(--ia-primary);
+}
+
+/* ---------- Utility Cards (dashboard counters) ---------- */
+.info-box{
+  border-radius:14px;
+  border:1px solid var(--ia-border);
+  box-shadow:var(--ia-shadow);
+}
+.info-box h5{margin:0 0 6px;font-weight:700;color:var(--ia-muted)}
+.info-box h3{margin:0;font-weight:800;color:var(--ia-primary)}
+
+/* ---------- Login Page helper ---------- */
+.login-page .card, .login-box .card{
+  border-radius:16px;
+  box-shadow:var(--ia-shadow);
+}
+.login-box .btn{width:100%;}
+
+/* ---------- Footer ---------- */
+.main-footer{
+  border-top:1px solid var(--ia-border);
+  background:#fff;
+}
+
+/* ---------- Scrollbar (webkit) ---------- */
+*::-webkit-scrollbar{width:10px;height:10px}
+*::-webkit-scrollbar-thumb{
+  background:#d1d5db;border-radius:10px;border:2px solid #f8fafc;
+}
+*::-webkit-scrollbar-thumb:hover{background:#9ca3af}
+
+/* ---------- Small helpers ---------- */
+.text-muted-ia{color:var(--ia-muted)!important}
+.rounded-xl{border-radius:var(--ia-radius)!important}
+.shadow-ia{box-shadow:var(--ia-shadow)!important}
+.border-ia{border:1px solid var(--ia-border)!important}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 991.98px){
+  .content-header .row.mb-2{align-items:center}
+  .content-wrapper{padding:14px}
+  .card-header{padding:12px 16px}
+}
+
+/* ---------- Optional: Dark mode (aktifkan jika perlu) ---------- */
+/* Tambahkan class .dark ke <body> untuk mencoba */
+body.dark{
+  --ia-bg:#0b1220;
+  --ia-card:#0f172a;
+  --ia-text:#e5e7eb;
+  --ia-muted:#94a3b8;
+  --ia-border:#1f2937;
+}
+body.dark .content-wrapper{background:var(--ia-bg)}
+body.dark .card,
+body.dark .table{background:var(--ia-card);border-color:var(--ia-border)}
+body.dark .table thead th{background:#0b1528;border-color:var(--ia-border)}
+body.dark .main-header.navbar{background:var(--ia-card);border-color:var(--ia-border)}
+body.dark .main-footer{background:var(--ia-card);border-color:var(--ia-border)}
+body.dark .form-control{background:#0b1528;color:var(--ia-text);border-color:#1f2a44}
+body.dark .form-control:focus{border-color:var(--ia-primary)}
